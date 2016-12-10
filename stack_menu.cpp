@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<conio.h>
 using namespace std;
 
 class Stack {
@@ -52,7 +52,7 @@ void menu(){
 	cout << "2: Pop \n";
 	cout << "3: Display \n";
 	cout << "4: Exit \n";
-	cout<<"\nEnter choice:";
+
 }
 	
 
@@ -62,11 +62,13 @@ int main() {
 	
 	int choice,number; 
 	Stack * s = new Stack(100);
-	menu();
+
+	
+	while (1){
+		system("cls");
+		menu();
+			cout<<"\nEnter choice:";
 	cin>>choice;
-	
-	while (choice!=4){
-	
 	switch (choice){
 		case 1: 
 			cout<<"Enter number:";
@@ -78,6 +80,7 @@ int main() {
 			
 			
 		case 2:
+			
 			s->pop();
 			break;
 			
@@ -89,6 +92,7 @@ int main() {
 			cout<<"Invalid";
 			exit(0);
 		}
+		getch();
 	}
 }
   
