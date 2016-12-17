@@ -1,0 +1,96 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+class LinkedList{
+    struct Node {
+        int x;
+        Node *next;
+    };
+
+public:
+    LinkedList(){
+        head = NULL; // set head to NULL
+    }
+
+   void addValue(int val){
+        Node *n = new Node();   
+        n->x = val;             
+        n->next = head;         
+                               
+        head = n;              
+    }
+  
+    int popValue(){
+        Node *n = head;
+        int ret = n->x;
+
+        head = head->next;
+        delete n;
+        return ret;
+        
+     }
+    void display(){
+    	Node*temp;
+    	temp=head;
+    	while (head!=0){
+    		Node*n=head;
+    		Node*x=temp;
+    		int ret = n->x;
+    		head=head->next;
+    		cout<<ret;
+		}
+	}
+
+private:
+    Node *head; 
+};
+  void mainMenu(){
+    	cout<<"What would you like to do?"
+    		<<"\n1. Insert into linked list"
+    		<<"\n2. Pop"
+    		<<"\n3. Exit"
+    		<<"\n4. Display";
+	}
+
+
+int main() {
+	LinkedList list;
+	int choice, number;
+	
+  	while(1){
+  	system("cls")	;
+    mainMenu();
+    cout<<"\n\nEnter choice:";
+    cin>>choice;
+    
+	
+   	switch(choice){
+   		case 1:{
+   			cout<<"Push:";
+   			cin>>number;
+   			list.addValue(number);
+   			break;
+		}
+		case 2:{
+			cout<<"Pop:";
+			cout<<list.popValue();
+			break;
+		}
+		default:
+			exit(0);
+		case 4:{
+			list.display();
+			break;
+		}
+		
+	}
+	getch();
+}
+   	
+	
+
+    return 0;
+}
+ 
+
