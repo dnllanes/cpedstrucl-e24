@@ -22,9 +22,10 @@ int main(){
 			cout<<"Switches: "<<A[j]<<" and "<<A[j+1]<<endl;
 	
 		cout<<"Pass no. "<<n++<<": ";
-		for(int k=0; k<5; k++)
-			cout<<A[k]<<" ";
+		for(int e=0; e<5; e++)
+			cout<<A[e]<<" ";
 			cout<<endl;
 	}
 	return 0;
 }
+// BUBBLESORT
