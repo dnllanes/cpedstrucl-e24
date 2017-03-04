@@ -22,10 +22,11 @@ int main(){
 		cout<<"Switches: "<<x<<" and "<<y<<endl;
 			
 		cout<<"Pass no. "<<w++<<": ";
-		for (int k=0; k<z; k++){
-			cout<<A[k]<<" ";
+		for (int e=0; e<z; e++){
+			cout<<A[e]<<" ";
 		}
 		cout<<endl;
 	}
 	return 0;
 }
+//INSERTIONSORT
